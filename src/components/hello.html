@@ -1,0 +1,20 @@
+<div class="hello">
+	<div class="connect">
+		<input type="text" v-model='channelName' placeholder="Channel name">
+		<input type="text" v-model='eventName' placeholder="Event name">
+
+		<button @click="connect(channelName, eventName)">
+			Register and add listener
+		</button>
+	</div>
+	
+	<div class="leave">
+		<input type="text" v-model='channelName' placeholder="Channel name">
+		<button @click="leave(channelName)">Leave from channel</button>
+	</div>
+
+	<div class="messages">
+		<button @click="cleanStory">Clean messages</button>
+		<code>{{msg}}</code>
+	</div>
+</div>
